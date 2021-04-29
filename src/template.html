@@ -3,10 +3,210 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webpack Demo</title>
+    <title>Indigo per Whirpool</title>
   </head>
-  <body class="container">
+  <body>
 
-    <img src="./assets/prova.png" alt="">
+  <header>
+      <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          <img src="./assets/logo.svg" alt="">
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <div class="nav-links">
+        <span class="link" id="section1Btn">Intro</span>
+        <span class="link" id="section2Btn">Overview</span>
+        <span class="link" id="section3Btn">Explore</span>
+      </div>
+    </div>
+  </header>
+
+    <section class="hero">
+      <div class="hero-title">
+        <h1>Aspect based sentiment analysis for Whirlpool</h1>
+      </div>
+      <div id="arrow" class="bounce">
+        <svg width="32" height="71" viewBox="0 0 32 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 1.5V69.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M30.5 51L16 69.5L1.5 51" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      </div>
+    </section>
+
+
+<div class="cont">
+  <main>
+    <div id="container">
+      <section id="section0">
+        <div class="slide">
+          <div class="slide-img">
+            <img src="./assets/viz.svg" alt="">
+          </div>
+          <div class="slide-info info">
+            <h2>What’s ABSA?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="section1">
+        <div class="slide">
+          <div class="slide-img">
+            <img src="./assets/viz.svg" alt="">
+          </div>
+          <div class="slide-info info">
+            <h2>What’s ABSA?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="section2">
+        <div class="slide">
+          <div class="slide-img">
+            <img src="./assets/viz.svg" alt="">
+          </div>
+          <div class="slide-info info">
+            <h2>What’s ABSA?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <nav>
+    <button><p>ABSA</p></button>
+    <button><p>Aspects</p></button>
+    <button><p>Project</p></button>
+  </nav>
+</div>
+
+
+
+<div id="section2" class="divider">
+  <h4>overview</h4>
+</div>
+
+    <section class="section-text-image page-width">
+      <div class="info">
+        <h3>Dataset composition</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="image">
+        <img src="./assets/viz.svg" alt="">
+      </div>
+    </section>
+
+    <section id="section-scroll" class="section page-width">
+      <span class="ciao"></span>
+      <div class="vert-timeline">
+        <div class="vert-timeline__wrap">
+          <div class="vert-timeline__left">
+            <div class="vert-timeline__text" data-marker-content="img1">
+              <h2 class="vert-timeline__year">There are 10 topics</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis ipsa earum dolores eum distinctio.</p>
+            </div>
+
+            <div class="vert-timeline__text" data-marker-content="img2">
+              <h2 class="vert-timeline__year">30 subtopics</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis ipsa earum dolores eum distinctio.</p>
+            </div>
+
+            <div class="vert-timeline__text" data-marker-content="img3">
+              <h2 class="vert-timeline__year">300 aspects</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis ipsa earum dolores eum distinctio. Integer id lorem eget massa fermentum elementum.</p>
+            </div>
+          </div>
+
+          <div class="vert-timeline__img-wrap">
+            <img src="./assets/viz.svg" id="img1" class="d-block imageToShow">
+            <img src="./assets/logo.svg" id="img2" class="d-block imageToShow">
+            <img src="./assets/pattern.svg" id="img3" class="d-block imageToShow">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div id="section3" class="divider">
+    <h4>Explore</h4>
+  </div>
+
+    <section class="section-text-image page-width">
+      <div class="info">
+        <h3>A bird's-eye view on the sentiment</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="image">
+        <img src="./assets/viz2.svg" alt="">
+      </div>
+    </section>
+
+
+    <section class="line-chart line-chart--topic page-width">
+      <div class="info">
+        <h2>Topics sentiment</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="chart-container chart-container--line">
+
+        <select class="select" id="selectButton"></select>
+        <div id="line_topic"></div>
+      </div>
+    </section>
+
+
+
+    <section class="line-chart line-chart--subtopic page-width">
+      <div class="info">
+        <h2>Topics sentiment</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="chart-container chart-container--line">
+        <select class="select" id="selectButton_subtopic"></select>
+        <div id="line_subtopic"></div>
+      </div>
+    </section>
+
+
+    <section class="bump-chart page-width">
+      <div class="info">
+        <h2>Topics popularity</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="bumpchart-container">
+        <img src="./assets/viz.svg" alt="">
+      </div>
+    </section>
+
+    <section class="bump-chart page-width">
+      <div class="info">
+        <h2>SubTopics popularity</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="bumpchart-container">
+        <img src="./assets/viz.svg" alt="">
+      </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+
   </body>
 </html>

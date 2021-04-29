@@ -1,3 +1,5 @@
 import "./main.scss";
-
-console.log("J");
+import "./js/animations"
+import "./js/slider"
+import "./js/chart-topic"
+import "./js/chart-subtopic"
