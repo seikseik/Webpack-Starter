@@ -22,25 +22,17 @@ module.exports = {
         }
       },
       {
-          test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-          loader: "file-loader"
-        },
-        {
-          test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-          loader: "file-loader"
-        },
-        {
-          test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-          loader: "file-loader"
-        },
-        {
-          test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-          loader: "file-loader"
-        },
-        {
-          test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-          loader: "file-loader"
-        }
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[contenthash].[ext]",
+              outputPath: "fonts/",
+            },
+          },
+        ],
+      },
     ]
   }
 };
