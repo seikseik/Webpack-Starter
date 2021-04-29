@@ -49,7 +49,7 @@ $titleSmall: 22px;
 $body: 18px;
 
 $padding:5vw;
-
+$sectionMargin: 25vh;
 
 
 // general
@@ -64,8 +64,8 @@ body{
 .page-width{
   padding-left: $padding;
   padding-right: $padding;
-  margin-top: $padding*3;
-  margin-bottom: $padding*3;
+  margin-top: $sectionMargin;
+  margin-bottom: $sectionMargin;
 }
 
 h1{
@@ -195,6 +195,9 @@ header{
 }
 
 // divider
+#section2.divider{
+  margin-top: 10vh;
+}
 .divider{
   text-align: center;
   h4{
@@ -212,6 +215,7 @@ header{
 .hero{
   position: relative;
   height: 100vh;
+  margin-bottom:15vh;
   width:100vw;
   top: -50px;
   display: flex;
@@ -269,7 +273,7 @@ header{
   main {
   overflow-y: hidden;
   overflow-x: hidden;
-  height: 100vh;
+  height: 80vh;
 }
 #container {
   display: inline-flex;
@@ -319,31 +323,21 @@ button p:hover{
 
 .slide{
   display:flex;
-  flex-direction: column;
-  img{
-    max-height: 35vh;
-  }
-}
-}
-
-// presentation
-
-.presentation{
-  .slide{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: $padding*3;
-    .slide-img{
-      max-width: 70vw;
-    }
-    .slide-info{
-      display:flex;
-      flex-direction: column;
-      justify-content: center;
+  .slide-img{
+    width:50%;
+    img{
+      width:100%;
+      height: auto;
     }
   }
+  .slide-info{
+    width:40%;
+    padding: 0px 30px;
+  }
+
+  }
 }
+
 
 // section text-image
 
@@ -351,6 +345,7 @@ button p:hover{
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-top: 15vh;
   .image{
     width:100%;
     img{
@@ -448,3 +443,21 @@ align-items: center;
     margin-top:10px;
   }
 }
+
+
+// calendar
+
+#calendar{
+  text{
+    fill:white;
+  }
+}
+
+.day {
+    stroke: white;
+  }
+  .month {
+    fill: none;
+    stroke: white;
+    stroke-width: 1px;
+  }
