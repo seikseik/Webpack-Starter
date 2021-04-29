@@ -46,22 +46,22 @@ svg_calendar.selectAll(".month")
 d3.csv("./data/calendar.csv", function(error, csv) {
   if (error) throw error;
 
-  // csv.forEach(function(d) {
-  // d.frequency = parseInt(d.avg_sentiment);
-  // });
-
   var Comparison_Type_Max = d3.max(csv, function(d) { return d.avg_sentiment; });
-
 
   var data = d3.nest()
     .key(function(d) { return d.day; })
     .rollup(function(d) { return  Math.sqrt(d[0].avg_sentiment / Comparison_Type_Max); })
     .map(csv);
 
+
   rect.filter(function(d) { return data.has(d); })
-    .attr("fill", function(d) { return colore(data.get(d)); })
+    .attr("fill", function(d) {
+       return colore(data.get(d));
+     })
     .select("title")
-      .text(function(d) { return d + ": " + percent(data.get(d)); });
+      .text(function(d) { return d + ": " + data.get(d); });
+
+
 });
 
 function monthPath(t0) {
