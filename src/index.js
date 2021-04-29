@@ -1,3 +1,6 @@
+import AOS from 'aos';
+AOS.init();
+
 import "./main.scss";
 import "./js/animations"
 import "./js/slider"
