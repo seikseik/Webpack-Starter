@@ -12,6 +12,7 @@ let svg_subtopic = d3.select("#line_subtopic")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
+    // .attr("viewBox", `0 0 860 400`)
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");

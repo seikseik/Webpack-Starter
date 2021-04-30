@@ -27,6 +27,26 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 
+function headerMenu() {
+  console.log("ciao");
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+document.getElementById("menu").addEventListener("click", function(){
+  console.log("ciao");
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+});
+
 
 
 // scrollTo
@@ -74,11 +94,11 @@ var controller = new ScrollMagic.Controller();
 		var wipeAnimation = new TimelineMax()
 			// animate to second panel
 			.to("#slideContainer", 0.5, {z: -50})		// move back in 3D space
-			.to("#slideContainer", 1,   {x: "-25%"})	// move in to first panel
+			.to("#slideContainer", 1,   {x: "-33.33%"})	// move in to first panel
 			.to("#slideContainer", 0.5, {z: 0})				// move back to origin in 3D space
 			// animate to third panel
 			.to("#slideContainer", 0.5, {z: -50, delay: 1})
-			.to("#slideContainer", 1,   {x: "-50%"})
+			.to("#slideContainer", 1,   {x: "-66.66%"})
 			.to("#slideContainer", 0.5, {z: 0})
 
 
@@ -99,11 +119,11 @@ var controller = new ScrollMagic.Controller();
       		var wipeAnimationTwo = new TimelineMax()
       			// animate to second panel
       			.to("#slideContainerTwo", 0.5, {z: -50})		// move back in 3D space
-      			.to("#slideContainerTwo", 1,   {x: "-25%"})	// move in to first panel
+      			.to("#slideContainerTwo", 1,   {x: "-33.33%"})	// move in to first panel
       			.to("#slideContainerTwo", 0.5, {z: 0})				// move back to origin in 3D space
       			// animate to third panel
       			.to("#slideContainerTwo", 0.5, {z: -50, delay: 1})
-      			.to("#slideContainerTwo", 1,   {x: "-50%"})
+      			.to("#slideContainerTwo", 1,   {x: "-66.66%"})
       			.to("#slideContainerTwo", 0.5, {z: 0})
 
 
@@ -120,40 +140,23 @@ var controller = new ScrollMagic.Controller();
 
 
 // variation
+// init Isotope
 
 var iso = new Isotope( '.grid', {
   itemSelector: '.element-item',
   layoutMode: 'fitRows'
 });
 
-// filter functions
-var filterFns = {
-  // show if number is greater than 50
-  numberGreaterThan50: function( itemElem ) {
-    var number = itemElem.querySelector('.number').textContent;
-    return parseInt( number, 10 ) > 50;
-  },
-  // show if name ends with -ium
-  ium: function( itemElem ) {
-    var name = itemElem.querySelector('.name').textContent;
-    return name.match( /ium$/ );
-  }
-};
 
-// bind filter button click
 var filtersElem = document.querySelector('.filters-button-group');
 filtersElem.addEventListener( 'click', function( event ) {
-  // only work with buttons
   if ( !matchesSelector( event.target, 'button' ) ) {
     return;
   }
   var filterValue = event.target.getAttribute('data-filter');
-  // use matching filter function
-  filterValue = filterFns[ filterValue ] || filterValue;
   iso.arrange({ filter: filterValue });
 });
 
-// change is-checked class on buttons
 var buttonGroups = document.querySelectorAll('.button-group');
 for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
   var buttonGroup = buttonGroups[i];
@@ -162,7 +165,6 @@ for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
 
 function radioButtonGroup( buttonGroup ) {
   buttonGroup.addEventListener( 'click', function( event ) {
-    // only work with buttons
     if ( !matchesSelector( event.target, 'button' ) ) {
       return;
     }

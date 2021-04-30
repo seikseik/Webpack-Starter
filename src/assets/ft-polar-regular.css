@@ -1,0 +1,27 @@
+/*
+Font: 		FT Polar
+Style: 		Regular
+URL: 		https://www.youworkforthem.com/font/T9947/ft-polar
+Foundry: 	Harrison Marshall
+Foundry: 	https://www.youworkforthem.com/designer/1185/harrison-marshall
+Copyright:	
+Version: 	17
+Created:	October 14, 2018
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+	font-family: 'FTPolar-Regular';
+	src: url('ft-polar-regular.eot');
+	src: url('ft-polar-regular.eot?#iefix') format('embedded-opentype'),
+             url('ft-polar-regular.woff2') format('woff2'),
+	     url('ft-polar-regular.woff') format('woff'),
+	     url('ft-polar-regular.ttf') format('truetype'),
+	     url('ft-polar-regular.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
