@@ -398,24 +398,32 @@ align-items: center;
   flex-direction: column;
   align-items: center;
   .chart-container{
-    background: #f1edf1;
-    border-radius: 20px;
+    background: #573b59;
+    // border-radius: 20px;
     padding:50px;
     width:100%;
-    max-width: 800px;
+    max-width: 900px;
     svg{
       width:100%;
+      text{
+        fill:white;
+        font-size: 12px;
+      }
+      .domain, line{
+        stroke:white;
+      }
     }
-    @include shadow;
+    // @include shadow;
   }
   .select{
     padding:10px 0px;
     margin-bottom: 30px;
     background: transparent;
+    color:white;
     border:none;
     font-size: $body-size;
     font-family: "basier_circlemedium" sans-serif;
-    color:$purple;
+    // color:$purple;
     &:focus{
       outline: none;
     }
@@ -437,6 +445,9 @@ align-items: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  rect:not(.filled){
+    fill: transparent;
+  }
   text{
     fill:white;
   }

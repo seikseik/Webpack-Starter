@@ -5,10 +5,7 @@ var width = 960,
 var percent = d3.format(".1%"),
     format = d3.timeFormat("%Y-%m-%d");
 
-    // var color = d3.scaleQuantize()
-    //     .domain([-.05, .05])
-    //     .range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
-let colore = d3.scaleLinear().range(["white", '#452947'])
+let colore = d3.scaleLinear().range(["#FFE8A3", '#006E90'])
         .domain([0, 1])
 let svg_calendar = d3.select("#calendar").selectAll("svg")
     .data(d3.range(2018, 2022))
@@ -58,9 +55,9 @@ d3.csv("./data/calendar.csv", function(error, csv) {
     .attr("fill", function(d) {
        return colore(data.get(d));
      })
+    .attr("class", "filled")
     .select("title")
       .text(function(d) { return d + ": " + data.get(d); });
-
 
 });
 
