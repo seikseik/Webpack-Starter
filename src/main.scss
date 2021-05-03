@@ -54,6 +54,9 @@ html {
 h1,h2,h3,h4{
   margin: 0;
 }
+ul{
+	list-style-type: none;
+}
 
 * {
   -moz-osx-font-smoothing: grayscale;
@@ -168,6 +171,96 @@ header{
   transition: .3s ease;
 }
 
+
+.header{
+		position: sticky;
+		top:0px;
+		color:white;
+		z-index: 999;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:white;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 30px;
+		cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: absolute;
+        left: -100%;
+        top: 0px;
+				padding-top:50px;
+				z-index: 9;
+        flex-direction: column;
+				background: $purple;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+				padding:0px;
+				margin:0px;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+		.nav-logo, .hamburger{
+			z-index: 10;
+		}
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+				&:first-child{
+					padding-top:50px;
+				}
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
 
 
 // divider
@@ -623,8 +716,34 @@ align-items: center;
     }
   }
 
+	footer{
+		margin-top: $sectionMargin;
+		.footer-container{
+			border-top:1px solid white;
+			padding-top:15px;
+			max-width: 800px;
+			margin: 0 auto;
+			.footer-data{
+				margin-bottom:$sectionMargin;
+				p{
+					opacity: .5;
+				}
+			}
+			.footer-logo{
+				text-align: center;
+				margin-bottom:$sectionMargin/2;
+			}
+
+		}
+	}
+
 // bump chart
 
+.bump-chart{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
   // MOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILE
 
