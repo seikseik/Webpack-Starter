@@ -450,15 +450,31 @@ align-items: center;
     }
     // @include shadow;
   }
+	.select-container{
+		position: relative;
+		margin-bottom: 30px;
+		width:fit-content;
+		&:after{
+			content: "\25BE";
+			position: absolute;
+			right: 15px;
+    	top: 8px;
+		}
+	}
   .select{
     padding:10px 0px;
-    margin-bottom: 30px;
+		position: relative;
     background: transparent;
     color:white;
-    border:none;
+    border:1px solid;
     font-size: $body-size;
     font-family: "basier_circlemedium" sans-serif;
-    // color:$purple;
+		background: transparent;
+		-webkit-appearance: none;
+		 -moz-appearance: none;
+		 appearance: none;
+		 padding: 10px;
+		 padding-right:45px;
     &:focus{
       outline: none;
     }
@@ -690,6 +706,10 @@ align-items: center;
 	flex-direction: column;
 	align-items: center;
 }
+
+
+
+
 
   // MOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILEMOBILE
 
