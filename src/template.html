@@ -45,7 +45,8 @@
           </svg>
       </div>
     </section>
-    <div class="introduction-section" id="pinContainer">
+
+    <div data-aos="fade-in" class="introduction-section" id="pinContainer">
     	<div id="slideContainer">
     		<section id="section1" class="panel blue">
           <div class="slide">
@@ -83,7 +84,7 @@
     	</div>
     </div>
 
-    <div id="section2" class="divider">
+    <div data-aos="fade-in" id="section2" class="divider spacing">
       <h4>overview</h4>
     </div>
 
@@ -294,20 +295,58 @@
         </div>
       </div>
     </div>
-    <div data-aos="fade-in" class="variations spacing">
-      <h2>Most relevant sentiment variations</h2>
 
-      <div class="card-container">
-        <div class="card">
-          <div>
-            <h3 class="name">Brand</h3>
-            <p class="span positive">1290 in 29 days</p>
-            <p class="text">There was a significant sentiment variation in the days between <strong>May 28</strong>, 2021 and <strong>Jun 17, 2021</strong></p>
-          </div>
-          <img class="chart" src="#" alt="">
+    <div class="variations spacing">
+        <h2>Most relevant sentiment variations</h2>
+          <div class="button-group filters-button-group">
+          <button class="button is-checked" data-filter="*">All</button>
+          <button class="button" data-filter=".positive">Positive</button>
+          <button class="button" data-filter=".negative">Negative</button>
+          <button class="button" data-filter=".brand">Brand</button>
+          <button class="button" data-filter=".quality">Qualità</button>
+          <button class="button" data-filter=".delivery">Delivery</button>
+          <button class="button" data-filter=".installazione">Installazione</button>
         </div>
+
+        <div class="grid">
+        <div class="grid-inner">
+
+          <div class="element-item transition positive brand" data-category="transition">
+            <div>
+              <h3 class="name">Brand</h3>
+              <p class="span positive">1290 in 29 days</p>
+              <p class="text">There was a significant sentiment variation in the days between <strong>May 28</strong>, 2021 and <strong>Jun 17, 2021</strong></p>
+            </div>
+            <img class="chart" src="#" alt="">
+          </div>
+          <div class="element-item transition negative" data-category="transition">
+            <div>
+                <h3 class="name">Brand</h3>
+                <p class="span negative">1290 in 29 days</p>
+                <p class="text">There was a significant sentiment variation in the days between <strong>May 28</strong>, 2021 and <strong>Jun 17, 2021</strong></p>
+            </div>
+            <img class="chart" src="./assets/placeholder.png" alt="">
+          </div>
+          <div class="element-item transition delivery" data-category="transition">
+            <div>
+                <h3 class="name">Delivery</h3>
+                <p class="span negative">1290 in 29 days</p>
+                <p class="text">There was a significant sentiment variation in the days between <strong>May 28</strong>, 2021 and <strong>Jun 17, 2021</strong></p>
+            </div>
+            <img class="chart" src="./assets/placeholder.png" alt="">
+          </div>
+          <div class="element-item transition delivery" data-category="transition">
+            <div>
+                <h3 class="name">Delivery</h3>
+                <p class="span negative">1290 in 29 days</p>
+                <p class="text">There was a significant sentiment variation in the days between <strong>May 28</strong>, 2021 and <strong>Jun 17, 2021</strong></p>
+            </div>
+            <img class="chart" src="./assets/placeholder.png" alt="">
+          </div>
+                </div>
+        </div>
+
       </div>
-    </div>
 
   <!-- SUBTOPICS SENTIMENT-->
     <section data-aos="fade-in"  class="line-chart line-chart--subtopic page-width spacing-half">
@@ -453,20 +492,19 @@
     </div>
     <div class="variations spacing">
         <h2>Most relevant sentiment variations</h2>
-          <div class="button-group filters-button-group">
+          <div class="button-group-two filters-button-group-two">
           <button class="button is-checked" data-filter="*">All</button>
           <button class="button" data-filter=".positive">Positive</button>
           <button class="button" data-filter=".negative">Negative</button>
-          <button class="button" data-filter=".brand">Brand</button>
-          <button class="button" data-filter=".quality">Qualità</button>
-          <button class="button" data-filter=".delivery">Delivery</button>
+          <button class="button" data-filter=".subOne">Brand</button>
+          <button class="button" data-filter=".subTwo">Qualità</button>
+          <button class="button" data-filter=".subThree">Delivery</button>
           <button class="button" data-filter=".installazione">Installazione</button>
         </div>
 
-        <div class="grid">
+        <div class="grid-two">
         <div class="grid-inner">
-
-          <div class="element-item transition positive brand" data-category="transition">
+          <div class="element-item-two transition positive subOne" data-category="transition">
             <div>
               <h3 class="name">Brand</h3>
               <p class="span positive">1290 in 29 days</p>
@@ -474,7 +512,7 @@
             </div>
             <img class="chart" src="#" alt="">
           </div>
-          <div class="element-item transition negative" data-category="transition">
+          <div class="element-item-two transition subTwo" data-category="transition">
             <div>
                 <h3 class="name">Brand</h3>
                 <p class="span negative">1290 in 29 days</p>
@@ -482,7 +520,7 @@
             </div>
             <img class="chart" src="./assets/placeholder.png" alt="">
           </div>
-          <div class="element-item transition delivery" data-category="transition">
+          <div class="element-item-two transition subThree" data-category="transition">
             <div>
                 <h3 class="name">Delivery</h3>
                 <p class="span negative">1290 in 29 days</p>
@@ -490,7 +528,7 @@
             </div>
             <img class="chart" src="./assets/placeholder.png" alt="">
           </div>
-          <div class="element-item transition delivery" data-category="transition">
+          <div class="element-item-two transition subOne subTwo" data-category="transition">
             <div>
                 <h3 class="name">Delivery</h3>
                 <p class="span negative">1290 in 29 days</p>
@@ -498,15 +536,15 @@
             </div>
             <img class="chart" src="./assets/placeholder.png" alt="">
           </div>
-                </div>
+          </div>
         </div>
 
       </div>
 
   <!-- TOPICS POPULARITY-->
-    <section data-aos="fade-in"  class="bump-chart page-width">
+    <section data-aos="fade-in" class="bump-chart page-width spacing-half">
       <div class="info">
-        <h2>Topics popularity</h2>
+        <h3>Topics popularity</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
       <div class="bumpchart-container">
@@ -645,9 +683,9 @@
 
 
     <!-- SUBTOPICS POPULARITY -->
-    <section data-aos="fade-in"  class="bump-chart page-width">
+    <section data-aos="fade-in"class="bump-chart page-width spacing-half">
       <div class="info">
-        <h2>SubTopics popularity</h2>
+        <h3>SubTopics popularity</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
       <div class="bumpchart-container">
@@ -784,54 +822,62 @@
         </div>
      </div>
 
-     <!-- <div class="tabs">
+
+    <!-- TAB PACKED CHART -->
+     <div class="tabs">
+       <div class="info">
+         <h3>The most important aspects</h3>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+         <nav id="tab-nav" data-aos="fade-in">
+           <button style="border-bottom: 3px solid white" class="tab-button"><p>2018</p></button>
+           <button class="tab-button"><p>2019</p></button>
+           <button class="tab-button"><p>2020</p></button>
+           <button class="tab-button"><p>2021</p></button>
+         </nav>
+
+       </div>
+
        <main>
          <div id="container">
-           <section id="section0">
-             <div data-aos="fade-in" class="slide">
+           <section data-aos="fade-in" class="tab-section" id="sec0">
+             <div class="slide">
                <div class="slide-img">
                  <img src="./assets/viz.svg" alt="">
-               </div>
-               <div class="slide-info info">
-                 <h2>What’s ABSA?</h2>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                </div>
              </div>
            </section>
 
-           <section id="section1">
-             <div data-aos="fade-in" class="slide">
+           <section data-aos="fade-in" class="tab-section" id="sec1">
+             <div class="slide">
                <div class="slide-img">
                  <img src="./assets/viz.svg" alt="">
-               </div>
-               <div class="slide-info info">
-                 <h2>What’s ABSA?</h2>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                </div>
              </div>
            </section>
 
-           <section id="section2">
-             <div data-aos="fade-in" class="slide">
+           <section data-aos="fade-in" class="tab-section" id="sec2">
+             <div  class="slide">
                <div class="slide-img">
                  <img src="./assets/viz.svg" alt="">
                </div>
-               <div class="slide-info info">
-                 <h2>What’s ABSA?</h2>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+             </div>
+           </section>
+           <section data-aos="fade-in" class="tab-section" id="sec3">
+             <div class="slide">
+               <div class="slide-img">
+                 <img src="./assets/viz.svg" alt="">
                </div>
              </div>
            </section>
          </div>
        </main>
 
-       <nav data-aos="fade-in">
-         <button><p>ABSA</p></button>
-         <button><p>Aspects</p></button>
-         <button><p>Project</p></button>
-       </nav>
-     </div> -->
 
+     </div>
+
+
+      <!-- FOOTER  -->
      <footer>
        <div class="footer-container page-width">
          <div class="footer-data">
