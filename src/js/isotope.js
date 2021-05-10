@@ -14,8 +14,8 @@ class Cardgrid {
 
   _initGrid(){
      return new Isotope( this.grid, {
+       layoutMode: 'horiz',
       itemSelector: this.elementItem,
-      layoutMode: 'fitRows'
     });
   }
 

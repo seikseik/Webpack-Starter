@@ -5,7 +5,7 @@ var width = 960,
 var percent = d3.format(".1%"),
     format = d3.timeFormat("%Y-%m-%d");
 
-let colore = d3.scaleLinear().range(["#FFE8A3", '#006E90'])
+let colore = d3.scaleLinear().range(["#FF6375", '#A8E8EC'])
         .domain([0, 1])
 let svg_calendar = d3.select("#calendar").selectAll("svg")
     .data(d3.range(2018, 2022))
