@@ -17,7 +17,7 @@ let svg = d3.select("#line_topic")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("./data/topic_month.csv", function(data) {
+d3.csv("./data/topic_month_2.csv", function(data) {
   data.forEach(function(d) {
       d.date = parseTime(d.date);
   });

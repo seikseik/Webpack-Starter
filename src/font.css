@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'FTPolar-Regular';
+	src: url('./assets/ft-polar-regular.eot');
+	src: url('./assets/ft-polar-regular.eot?#iefix') format('embedded-opentype'),
+             url('./assets/ft-polar-regular.woff2') format('woff2'),
+	     url('./assets/ft-polar-regular.woff') format('woff'),
+	     url('./assets/ft-polar-regular.ttf') format('truetype'),
+	     url('./assets/ft-polar-regular.svg#youworkforthem') format('svg');
+}
+
+@font-face {
+    font-family: 'basier_circleregular';
+    src: url('./assets/basiercircle-regular-webfont.eot');
+    src: url('./assets/basiercircle-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/basiercircle-regular-webfont.woff2') format('woff2'),
+         url('./assets/basiercircle-regular-webfont.woff') format('woff'),
+         url('./assets/basiercircle-regular-webfont.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'basier_circlemedium';
+    src: url('./assets/basiercircle-medium-webfont.eot');
+    src: url('./assets/basiercircle-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/basiercircle-medium-webfont.woff2') format('woff2'),
+         url('./assets/basiercircle-medium-webfont.woff') format('woff'),
+         url('./assets/basiercircle-medium-webfont.ttf') format('truetype');
+
+}

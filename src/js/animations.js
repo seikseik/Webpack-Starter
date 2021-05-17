@@ -82,3 +82,83 @@ buttons.forEach(function(elem,i) {
     gsap.set(buttons[i], {borderBottom:"3px solid #FFFFFF"})
   })
 });
+
+
+//lottiefile
+
+
+let animData = {
+  container: document.getElementById('svg'),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid meet",
+    imagePreserveAspectRatio: "xMidYMid meet"
+  },
+  path: "https://assets1.lottiefiles.com/packages/lf20_eoqh92fl/Hero/data.json"
+};
+
+let anim;
+anim = lottie.loadAnimation(animData);
+
+let animSlideOne = {
+  container: document.getElementById('anim-slide-1'),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid meet",
+    imagePreserveAspectRatio: "xMidYMid meet"
+  },
+  path: "https://assets2.lottiefiles.com/packages/lf20_fysbxhxg/1 - What is ABSA/data.json"
+};
+
+let anim_slide_1;
+anim_slide_1 = lottie.loadAnimation(animSlideOne);
+
+
+let animSlideTwo = {
+  container: document.getElementById('anim-slide-2'),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid meet",
+    imagePreserveAspectRatio: "xMidYMid meet"
+  },
+  path: "https://assets6.lottiefiles.com/packages/lf20_tqhdmo0k/2 - Why aspects are important/data.json"
+};
+
+let anim_slide_2;
+anim_slide_2 = lottie.loadAnimation(animSlideTwo);
+
+let animSlideThree = {
+  container: document.getElementById('anim-slide-3'),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid meet",
+    imagePreserveAspectRatio: "xMidYMid meet"
+  },
+  path: "https://assets5.lottiefiles.com/packages/lf20_kkphudl2/3 - The project/data.json"
+};
+
+let anim_slide_3;
+anim_slide_3 = lottie.loadAnimation(animSlideThree);
+
+
+// anim.onComplete = function(){ // code here
+//   console.log('complete')
+// }
+//
+// function setHeight(){
+//   console.log("dd")
+//   let animWrap = document.getElementById('svg');
+//   let anim = animWrap.getElementsByTagName('svg');
+//   anim[0].setAttribute("viewBox", "none");
+//   anim[0].style.width = "100vw";
+//   anim[0].style.height = "100vh";
+//   anim[0].style.minHeight = "100vh";
+// }

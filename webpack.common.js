@@ -11,22 +11,27 @@ module.exports = {
         test: /\.html$/,
         use: ["html-loader"]
       },
+      // {
+      //   test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+      //   use: {
+      //     loader: 'file-loader?name=[name].[ext]' ,
+      //     options: {
+      //     name: "[name].[ext]",
+      //     outputPath: "assets/",
+      //     publicPath: "assets/"
+      //   }
+      //   },
+      // }
       {
-        test: /\.(svg|png|jpg|gif|csv|woff)$/,
-        use: {
-          loader: "file-loader",
-          options: {
-            name: "[name].[ext]",
-            outputPath: "assets"
-          }
-        }
-      },
-      {
-        test: /\.(woff|woff2|ttf)$/,
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
         use: {
           loader: 'url-loader',
+          options: {
+            limit:false,
+            outputPath: "assets/",
+          }
         },
-      },
+      }
     ]
   }
 };

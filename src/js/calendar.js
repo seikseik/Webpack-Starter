@@ -40,7 +40,7 @@ svg_calendar.selectAll(".month")
     .attr("class", "month")
     .attr("d", monthPath);
 
-d3.csv("./data/calendar.csv", function(error, csv) {
+d3.csv("./data/date.csv", function(error, csv) {
   if (error) throw error;
 
   var Comparison_Type_Max = d3.max(csv, function(d) { return d.avg_sentiment; });
@@ -58,6 +58,7 @@ d3.csv("./data/calendar.csv", function(error, csv) {
     .attr("class", "filled")
     .select("title")
       .text(function(d) { return d + ": " + data.get(d); });
+
 
 });
 

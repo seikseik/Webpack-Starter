@@ -18,7 +18,7 @@ let svg_subtopic = d3.select("#line_subtopic")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("./data/subtopic_month.csv", function(data) {
+d3.csv("./data/subtopic_month_2.csv", function(data) {
   data.forEach(function(d) {
       d.date = parseTime_subtopic(d.date);
   });

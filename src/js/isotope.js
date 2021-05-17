@@ -42,6 +42,4 @@ class Cardgrid {
 }
 
 const first = new Cardgrid(".element-item", ".grid", ".button-group");
-const second = new Cardgrid(".element-item-two", ".grid-two", ".button-group-two");
 const third = new Cardgrid(".element-item-three", ".grid-three", ".button-group-three");
-const fourth = new Cardgrid(".element-item-four", ".grid-four", ".button-group-four");
