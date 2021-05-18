@@ -241,10 +241,10 @@ header{
   &:after{
     display: block;
     pointer-events: none;
-    height: 130px;
+    height: 190px;
     position: absolute;
     width: 100%;
-    bottom: -50px;
+    bottom: -40px;
     margin-bottom: -1px;
     content: '';
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#452947));
@@ -464,7 +464,7 @@ align-items: center;
     	top: 8px;
 		}
 	}
-  .select{
+  select{
     padding:10px 0px;
 		position: relative;
     background: transparent;
@@ -655,7 +655,8 @@ align-items: center;
     .grid, .grid-two, .grid-three, .grid-four{
       // max-width: 80vw;
       margin:0 auto;
-			width:100%;
+			width:935px;
+			max-width: 935px;
 
       .element-item, .element-item-two, .element-item-three, .element-item-four{
         @include shadow;
@@ -670,8 +671,6 @@ align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-				transition-duration: .3s !important;
-				transform: none !important;
         .span{
           border:1px solid;
           padding:3px 10px;
@@ -741,7 +740,32 @@ align-items: center;
 	}
 }
 
+// product line chart
+.double-line-chart{
+  .line {
+  fill: none;
+  stroke: #999999;
+  stroke-width: 1.5px;
+  }
 
+  .selected{
+  stroke: #EF5285;
+  stroke-width: 2.5px;
+  }
+  .select-container{
+    display: flex;
+    #productDropdown{
+      margin-right: 30px;
+      position: relative;
+      &:after{
+        content: "\25BE";
+        position: absolute;
+        right: 15px;
+        top: 8px;
+      }
+    }
+  }
+}
 
 
 
@@ -825,6 +849,12 @@ align-items: center;
       width:100%;
     }
 
+		.section-text-image{
+			.image{
+
+			}
+		}
+
 		.spacing{
 			margin-bottom:$sectionMargin/2 !important;
 		}
@@ -846,7 +876,7 @@ align-items: center;
       }
     }
     .line-chart{
-      .select{
+      select{
         background: transparent;
       }
       .chart-container{
@@ -923,6 +953,8 @@ align-items: center;
           position: relative !important;
           top: unset !important;
           left: unset !important;
+					transition-duration: .3s !important;
+					transform: none !important;
 					&:last-child{
 						margin-right: 30px;
 					}

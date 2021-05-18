@@ -114,6 +114,7 @@ let animSlideOne = {
   path: "https://assets2.lottiefiles.com/packages/lf20_fysbxhxg/1 - What is ABSA/data.json"
 };
 
+
 let anim_slide_1;
 anim_slide_1 = lottie.loadAnimation(animSlideOne);
 
@@ -149,16 +150,15 @@ let anim_slide_3;
 anim_slide_3 = lottie.loadAnimation(animSlideThree);
 
 
-// anim.onComplete = function(){ // code here
-//   console.log('complete')
-// }
-//
-// function setHeight(){
-//   console.log("dd")
-//   let animWrap = document.getElementById('svg');
-//   let anim = animWrap.getElementsByTagName('svg');
-//   anim[0].setAttribute("viewBox", "none");
-//   anim[0].style.width = "100vw";
-//   anim[0].style.height = "100vh";
-//   anim[0].style.minHeight = "100vh";
-// }
+
+anim.addEventListener('DOMLoaded', setHeight);
+
+
+function setHeight(){
+  let animWrap = document.getElementById('svg');
+  let anim = animWrap.getElementsByTagName('svg');
+  anim[0].setAttribute("viewBox", "");
+  // anim[0].style.width = "100vw";
+  // anim[0].style.height = "100vh";
+  // anim[0].style.minHeight = "100vh";
+}
