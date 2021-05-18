@@ -348,6 +348,14 @@ header{
       }
     }
     }
+    .a-legend{
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      img{
+        padding:0 30px;
+      }
+    }
 }
 
 
@@ -732,8 +740,12 @@ align-items: center;
 		overflow: hidden;
 		.bump-overflow{
 			overflow-x: scroll;
+      cursor: grab;
 			width:100vw;
-			img{
+      &.active{
+        cursor: grabbing;
+      }
+			svg{
 			padding-left: 5vw;
 			}
 		}
