@@ -350,10 +350,11 @@ header{
     }
     .a-legend{
       text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
+      margin: 0 30px;
       img{
-        padding:0 30px;
+        width:100%;
+        max-width: 350px;
+        height: auto;
       }
     }
 }
@@ -766,6 +767,7 @@ align-items: center;
   }
   .select-container{
     display: flex;
+    flex-wrap: wrap;
     #productDropdown{
       margin-right: 30px;
       position: relative;
@@ -897,7 +899,7 @@ align-items: center;
         svg{
           width:unset;
         }
-        #line_subtopic, #line_topic{
+        #line_subtopic, #line_topic, #graph{
           overflow: scroll;
         }
       }
@@ -910,6 +912,9 @@ align-items: center;
     }
     .bumpchart-container{
       width:100%;
+      svg{
+        padding-left: 0px !important;
+      }
     }
 
 
@@ -1018,5 +1023,26 @@ align-items: center;
 				top: 22px;
 			}
 		}
+
+    .a-legend{
+      margin-top: 15px !important;
+    }
+    .double-line-chart{
+      .select-container{
+        &:after{
+          content: none;
+        }
+        #yearDropdown{
+          position: relative;
+          margin-top: 10px;
+          &:after{
+            content: "\25BE";
+            position: absolute;
+            right: 15px;
+            top: 8px;
+          }
+        }
+      }
+    }
 
   }
