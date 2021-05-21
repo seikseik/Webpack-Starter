@@ -149,6 +149,20 @@ let animSlideThree = {
 let anim_slide_3;
 anim_slide_3 = lottie.loadAnimation(animSlideThree);
 
+let animSlideFour = {
+  container: document.getElementById('anim-slide-4'),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid meet",
+    imagePreserveAspectRatio: "xMidYMid meet"
+  },
+  path: "https://assets1.lottiefiles.com/packages/lf20_msvwswvy/4 - From aspects to topics/data.json"
+};
+
+let anim_slide_4;
+anim_slide_4 = lottie.loadAnimation(animSlideFour);
 
 
 anim.addEventListener('DOMLoaded', setHeight);
@@ -165,8 +179,10 @@ function setHeight(){
 
 
 
-// horizontal drag on bumpcharts
 
+
+
+// horizontal drag on bumpcharts
 
 const slider = document.querySelectorAll('.bump-overflow');
 let isDown = false;
