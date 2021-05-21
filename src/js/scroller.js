@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
       new ScrollMagic.Scene({
           triggerElement: "#pinContainer",
           triggerHook: "onLeave",
-          duration: "500%"
+          duration: "600%"
         })
         .setPin("#pinContainer")
         .setTween(wipeAnimation)

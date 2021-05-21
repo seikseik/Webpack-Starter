@@ -172,9 +172,9 @@ function setHeight(){
   let animWrap = document.getElementById('svg');
   let anim = animWrap.getElementsByTagName('svg');
   anim[0].setAttribute("viewBox", "");
-  // anim[0].style.width = "100vw";
-  // anim[0].style.height = "100vh";
-  // anim[0].style.minHeight = "100vh";
+  anim[0].style.width = "100vw";
+  anim[0].style.height = "100vh";
+  anim[0].style.minHeight = "100vh";
 }
 
 

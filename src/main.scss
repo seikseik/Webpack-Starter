@@ -31,6 +31,12 @@ ul{
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
   font-weight: normal;
+
+  &::-webkit-scrollbar {
+  display: none;
+}
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 
@@ -882,14 +888,30 @@ align-items: center;
 	}
 
 
+div, section{
+  box-sizing: border-box;
+}
   @media (max-width: 1080px) {
     body{
       width:100%;
+      font-size: 16px;
     }
 
+  .info h3, #slideContainerTwo h2{
+    font-size: 30px;
+  }
 		.section-text-image{
-			.image{
-
+      padding:0px;
+      margin:0px;
+      .info{
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+      .image{
+        overflow-x: scroll;
+      }
+			img{
+        min-width: 200vw !important;
 			}
 		}
 
@@ -911,6 +933,9 @@ align-items: center;
     .hero{
       h1{
         font-size: 35px;
+      }
+      &:after{
+        content: none;
       }
     }
     .line-chart{
@@ -941,6 +966,7 @@ align-items: center;
       width:100%;
       svg{
         padding-left: 0px !important;
+        margin-left: -10vw;
       }
     }
 
@@ -984,15 +1010,15 @@ align-items: center;
         height: auto !important;
         display: flex;
         .grid-inner{
-          width:105%;
+          width:110%;
           overflow-x: scroll;
           display:flex;
-					max-height: 500px !important;
+					max-height: fit-content !important;
         }
         .element-item, .element-item-two, .element-item-three, .element-item-four{
-          width: 50vw;
-          min-width: 50vw;
-          height: 40vh;
+          width: 80vw;
+          min-width: 80vw;
+          height: 60vh;
           margin: 10px;
           position: relative !important;
           top: unset !important;
@@ -1046,8 +1072,8 @@ align-items: center;
 		.select-container{
 			padding:15px;
 			&:after{
-				right: 25px;
-				top: 22px;
+				right: 25px !important;
+				top: 22px!important;
 			}
 		}
 
