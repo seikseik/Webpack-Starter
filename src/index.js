@@ -1,4 +1,4 @@
-require('./assets/favicon.png')
+require('./assets/favicon.ico')
 
 import AOS from 'aos';
 AOS.init();
@@ -8,6 +8,7 @@ import "./js/animations"
 import "./js/chart-topic"
 import "./js/chart-subtopic"
 import "./js/chart-product"
+import "./js/product"
 import "./js/calendar"
 import "./js/isotope"
 import "./js/scroller"

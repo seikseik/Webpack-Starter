@@ -31,7 +31,8 @@ ul{
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
   font-weight: normal;
-
+}
+@mixin hidescroll{
   &::-webkit-scrollbar {
   display: none;
 }
@@ -246,19 +247,21 @@ header{
   display: flex;
   justify-content: center;
   align-items:center;
-  &:after{
-    display: block;
-    pointer-events: none;
-    height: 190px;
-    position: absolute;
-    width: 100%;
-    bottom: -40px;
-    margin-bottom: -1px;
-    content: '';
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#452947));
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #452947 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#452947', GradientType=0);
-  }
+  // &:after{
+  //   display: block;
+  //   pointer-events: none;
+  //   height: 190px;
+  //   position: absolute;
+  //   width: 100%;
+  //   bottom: -40px;
+  //   margin-bottom: -1px;
+  //   content: '';
+  //
+  //   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #452947 100%);
+  //   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #452947 100%);
+  //
+  //   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#452947', GradientType=0);
+  // }
   h1{
     font-size: $title;
     max-width: 80vw;
@@ -473,27 +476,29 @@ align-items: center;
 	.select-container{
 		position: relative;
 		margin-bottom: 30px;
-		width:fit-content;
-		&:after{
-			content: "\25BE";
-			position: absolute;
-			right: 15px;
-    	top: 8px;
-		}
+		width: -webkit-fit-content;width: -moz-fit-content;width: fit-content;
+		// &:after{
+		// 	content: "\25BE";
+		// 	position: absolute;
+		// 	right: 15px;
+    // 	top: 8px;
+		// }
 	}
   select{
     padding:10px 0px;
 		position: relative;
     background: transparent;
     color:white;
-    border:1px solid;
+    border:none;
+    border-bottom:1px solid;
     font-size: 15px;
     font-family: "basier_circlemedium" sans-serif;
 		background: transparent;
-		-webkit-appearance: none;
-		 -moz-appearance: none;
-		 appearance: none;
-		 padding: 10px;
+		// -webkit-appearance: none;
+		//  -moz-appearance: none;
+		//  appearance: none;
+     text-transform: uppercase;
+		 padding-bottom: 10px;
 		 padding-right:45px;
     &:focus{
       outline: none;
@@ -544,6 +549,7 @@ align-items: center;
 		overflow: hidden;
 		-webkit-perspective: 1000;
 		 perspective: 1000;
+     @include hidescroll;
 	}
 
   #slideContainer {
@@ -679,6 +685,7 @@ align-items: center;
 			position: relative;
 			height: 100%;
 			overflow-x: scroll;
+      @include hidescroll;
       svg{
         width:100%;
       }
@@ -686,17 +693,18 @@ align-items: center;
     .grid, .grid-two, .grid-three, .grid-four{
       // max-width: 80vw;
       margin:0 auto;
-			width:935px;
-			max-width: 935px;
+			// width:935px;
+			// max-width: 935px;
+      width:1100px;
 
       .element-item, .element-item-two, .element-item-three, .element-item-four{
         @include shadow;
         background: white;
         padding:30px 20px;
-				width:  250px;
-				max-width: 300px !important;
+				width:  330px;
+				max-width: 330px !important;
         margin: 0 10px;
-        height: 350px;
+        height: 400px;
         margin-bottom:20px;
         color:$purple;
         display: flex;
@@ -709,7 +717,7 @@ align-items: center;
           border:1px solid;
           padding:3px 10px;
           border-radius: 10px;
-          width: fit-content;
+          width: -webkit-fit-content;width: -moz-fit-content;width: fit-content;
           margin-bottom: 15px;
           display: flex;
           &.positive{
@@ -767,6 +775,7 @@ align-items: center;
 		overflow: hidden;
 		.bump-overflow{
 			overflow-x: scroll;
+      @include hidescroll;
       cursor: grab;
 			width:100vw;
       &.active{
@@ -801,12 +810,12 @@ align-items: center;
     #productDropdown{
       margin-right: 30px;
       position: relative;
-      &:after{
-        content: "\25BE";
-        position: absolute;
-        right: 15px;
-        top: 8px;
-      }
+      // &:after{
+      //   content: "\25BE";
+      //   position: absolute;
+      //   right: 15px;
+      //   top: 8px;
+      // }
     }
   }
 }
@@ -885,13 +894,63 @@ align-items: center;
 	    .hamburger.active .bar:nth-child(3) {
 	        transform: translateY(-8px) rotate(-45deg);
 	    }
+
+      .variations{
+        .grid, .grid-two, .grid-three, .grid-four{
+          max-width: 100%;
+          height: auto !important;
+          display: flex;
+          .grid-inner{
+            width:110%;
+            overflow-x: scroll;
+            @include hidescroll;
+            display:flex;
+  					max-height: fit-content !important;
+            max-height: -webkit-fit-content;
+            max-height: -moz-fit-content;
+          }
+          .element-item, .element-item-two, .element-item-three, .element-item-four{
+            width: 80vw;
+            min-width: 80vw;
+            height: 60vh;
+            margin: 10px;
+            position: relative !important;
+            top: unset !important;
+            left: unset !important;
+  					transition-duration: .3s !important;
+  					transform: none !important;
+  					&:last-child{
+  						margin-right: 30px;
+  					}
+          }
+        }
+  			.button-group, .button-group-two, .button-group-three, .button-group-four{
+  				justify-content: center;
+  				font-size: $body-size;
+  			}
+      }
 	}
 
 
 div, section{
   box-sizing: border-box;
 }
+
+.hide-mobile{
+  display: block !important;
+}
+.hide-desktop{
+  display: none !important;
+}
+
   @media (max-width: 1080px) {
+    .hide-mobile{
+      display: none !important;
+    }
+    .hide-desktop{
+      display: block !important;
+    }
+
     body{
       width:100%;
       font-size: 16px;
@@ -909,6 +968,7 @@ div, section{
       }
       .image{
         overflow-x: scroll;
+        @include hidescroll;
       }
 			img{
         min-width: 200vw !important;
@@ -948,25 +1008,33 @@ div, section{
         svg{
           width:unset;
         }
-        #line_subtopic, #line_topic, #graph{
+        #line_subtopic, #line_topic, #graph, #line_product{
           overflow: scroll;
+          @include hidescroll;
         }
       }
     }
 
     .bump-chart{
+      &.page-width{
+        margin: 0px;
+      }
+      .info{
+        margin-left: 5vw;
+        margin-right: 5vw;
+      }
       img{
         width:100%;
       }
     }
     .legend-bump{
-      margin:0px !important;
+      margin:10px !important;
     }
     .bumpchart-container{
       width:100%;
       svg{
         padding-left: 0px !important;
-        margin-left: -10vw;
+        margin-left: 5vw;
       }
     }
 
@@ -998,43 +1066,14 @@ div, section{
     #calendar{
       flex-direction: row;
       overflow-x: scroll;
+      @include hidescroll;
       svg{
         width:unset;
         min-width: 960px;
       }
     }
 
-    .variations{
-      .grid, .grid-two, .grid-three, .grid-four{
-        max-width: 100%;
-        height: auto !important;
-        display: flex;
-        .grid-inner{
-          width:110%;
-          overflow-x: scroll;
-          display:flex;
-					max-height: fit-content !important;
-        }
-        .element-item, .element-item-two, .element-item-three, .element-item-four{
-          width: 80vw;
-          min-width: 80vw;
-          height: 60vh;
-          margin: 10px;
-          position: relative !important;
-          top: unset !important;
-          left: unset !important;
-					transition-duration: .3s !important;
-					transform: none !important;
-					&:last-child{
-						margin-right: 30px;
-					}
-        }
-      }
-			.button-group, .button-group-two, .button-group-three, .button-group-four{
-				justify-content: center;
-				font-size: $body-size;
-			}
-    }
+
 
     .changes{
       .row{
@@ -1088,12 +1127,32 @@ div, section{
         #yearDropdown{
           position: relative;
           margin-top: 10px;
-          &:after{
-            content: "\25BE";
-            position: absolute;
-            right: 15px;
-            top: 8px;
-          }
+          // &:after{
+          //   content: "\25BE";
+          //   position: absolute;
+          //   right: 15px;
+          //   top: 8px;
+          // }
+        }
+      }
+    }
+
+
+    .introduction-section-mobile{
+      .slide-info{
+        padding:0px 5vw;
+      }
+      .slide-img{
+        display: flex;
+        justify-content: center;
+        width:100%;
+        padding: 15vw;
+        &:first-child{
+          padding-top:0px;
+        }
+         img{
+           width:100%;
+          height: auto;
         }
       }
     }

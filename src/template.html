@@ -3,12 +3,30 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png"> -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Primary Meta Tags -->
+  <title>How customers perceive Whirlpool?</title>
+  <meta name="title" content="How customers perceive Whirlpool?">
+  <meta name="description" content="To help Whirlpool we collected 84K reviews from customers about the quality of the customer service in Italy and built a dataset that took into consideration 4 years of activity. The following are the key business insights that we found.">
 
-  <title>How customers perceive Whirlpool?
-</title>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metatags.io/">
+  <meta property="og:title" content="How customers perceive Whirlpool?">
+  <meta property="og:description" content="To help Whirlpool we collected 84K reviews from customers about the quality of the customer service in Italy and built a dataset that took into consideration 4 years of activity. The following are the key business insights that we found.">
+  <meta property="og:image" content="meta.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://metatags.io/">
+  <meta property="twitter:title" content="How customers perceive Whirlpool?">
+  <meta property="twitter:description" content="To help Whirlpool we collected 84K reviews from customers about the quality of the customer service in Italy and built a dataset that took into consideration 4 years of activity. The following are the key business insights that we found.">
+  <meta property="twitter:image" content="meta.jpg">
+
 </head>
 
 <body>
@@ -88,13 +106,11 @@
         <section class="panel green">
           <div class="slide">
             <div class="slide-img">
-              <div id="anim-slide-3"></div>
+              <div id="anim-slide-4"></div>
             </div>
             <div class="slide-info info">
-              <h2>The project</h2>
-              <p>To help Whirlpool we collected 84K reviews from customers about the quality of the customer service in Italy. These reviews were left after customers received assistance from Whirlpool technicians or other customer service people
-                consequent to a failure of a product. We built a dataset that took into consideration 4 years of activity, from 2017 to 2020 to ensure a time horizon with consistent data. From this dataset, we were able to identify relevant business
-                aspects such as brand names, products, or intervention quality. The following are the key business insights that we found.</p>
+              <h2>From aspects to topics</h2>
+              <p>However, the level of aspects is not enough. Since they are extracted directly from the text, the aspects can be any word or expression and their number is too high to be able to have a global overview. Moreover, the words expressed by the user are not necessarily consistent with the metrics that the business wants to monitor. This is why, using another machine learning model, we map the aspects into a topic level, composed of a few macro topics that contain slightly more detailed subtopics. In this way, the topic level is stable over time and allows a comparative analysis even over different periods.</p>
             </div>
           </div>
         </section>
@@ -103,13 +119,13 @@
         <section class="panel green">
           <div class="slide">
             <div class="slide-img">
-              <div id="anim-slide-4"></div>
+              <div id="anim-slide-3"></div>
             </div>
             <div class="slide-info info">
-              <h2>From aspects to topics</h2>
-              <p>However, the level of aspects is not enough. Since they are extracted directly from the text, the aspects can be any word or expression and their number is too high to be able to have a global overview. Moreover, the words expressed
-                by the user are not necessarily consistent with the metrics that the business wants to monitor. This is why, using another machine learning model, we map the aspects into a topic level, composed of a few macro topics that contain
-                slightly more detailed subtopics. In this way, the topic level is stable over time and allows a comparative analysis even over different periods.</p>
+              <h2>The project</h2>
+              <p>To help Whirlpool we collected 84K reviews from customers about the quality of the customer service in Italy. These reviews were left after customers received assistance from Whirlpool technicians or other customer service people
+                consequent to a failure of a product. We built a dataset that took into consideration 4 years of activity, from 2017 to 2020 to ensure a time horizon with consistent data. From this dataset, we were able to identify relevant business
+                aspects such as brand names, products, or intervention quality. The following are the key business insights that we found.</p>
             </div>
           </div>
         </section>
@@ -141,7 +157,7 @@
 
 
     <!-- SLIDER 2 -->
-    <div class="introduction-section spacing" id="pinContainerTwo">
+    <div class="introduction-section spacing hide-mobile" id="pinContainerTwo">
       <div id="slideContainerTwo">
         <section class="panel blue">
           <div class="slide">
@@ -185,6 +201,55 @@
         </section>
       </div>
     </div>
+
+
+    <div class="introduction-section-mobile spacing hide-desktop">
+      <div class="section-container">
+        <section>
+          <div class="slide">
+            <div class="slide-img">
+              <img src="./assets/chart/topic-group.svg" alt="">
+            </div>
+            <div class="slide-info info">
+              <h2>There are 10 topics</h2>
+              <p>The topics represent the most macroscopic level, dividing the information into a few macro-categories.<br><br>
+
+                The most present topics are "quality" and "repair", consistently with the type of reviews analyzed.</p>
+            </div>
+          </div>
+        </section>
+        <sectio>
+          <div class="slide">
+            <div class="slide-img">
+              <img src="./assets/chart/subtopic-group.svg" alt="">
+            </div>
+            <div class="slide-info info">
+              <h2>30 subtopics</h2>
+              <p>The topics are divided into a total of 36 subtopics that allow a breakdown at a higher but still stable level of detail.<br><br>
+
+                The most frequent ones are "Product Quality", "Quality Experience" and "Technician Professionalism": this suggests that many reviews are generic and are about an overall quality aspect.</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="slide">
+            <div class="slide-img">
+              <img src="./assets/chart/aspect-group.svg" alt="">
+            </div>
+            <div class="slide-info info">
+              <h2>4453 aspects</h2>
+              <p>The aspects are extracted directly from the text and are therefore in Italian, the language of the users selected for this project. They are extracted in an unsupervised way, so they can vary a lot: their number increases if the
+                variability of language used by users increases.
+                <br><br>
+                The most frequent aspects are generic terms about the assistance like "tecnico", "intervento", "assistenza", "prodotto", "riparazione" followed by some products "lavatrice", "frigorifero", "asciugatrice", "lavastoviglie".</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+
+
 
     <div id="section3" class="divider spacing">
       <h4>Explore</h4>
@@ -1638,9 +1703,9 @@
 
         </div>
 
-        <div class="legend-bump">
+        <!-- <div class="legend-bump">
           <img src="./assets/chart/subtopics-time-legend.svg" alt="">
-        </div>
+        </div> -->
       </div>
     </section>
     <div data-aos="fade-in" class="changes page-width spacing">
@@ -1786,12 +1851,20 @@
         <p>Each review derives from the assistance linked to a Service Order, of which we know the associated product. The product is one of 38 categories, indicating the household appliance family: the most frequent are Washers, Dishwashers, Fridge,
           Freezers, and Dryers.</p>
       </div>
-      <div class="chart-container">
+      <!-- <div class="chart-container">
         <div class="select-container">
           <div id="productDropdown"></div>
           <div id="yearDropdown"></div>
         </div>
         <div id="graph"></div>
+      </div> -->
+      <div class="chart-container chart-container--line">
+        <div class="chart-inner">
+          <div class="select-container">
+            <select class="select" id="selectButton_product"></select>
+          </div>
+          <div id="line_product"></div>
+        </div>
       </div>
     </div>
 
