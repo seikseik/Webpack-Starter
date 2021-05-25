@@ -1,3 +1,4 @@
+import AOS from 'aos';
 
 class Cardgrid {
   constructor(elementItem, grid, buttons){
@@ -26,6 +27,7 @@ class Cardgrid {
         }
         let filterValue = event.target.getAttribute('data-filter');
         iso.arrange({ filter: filterValue });
+        AOS.refresh()
       });
   }
 

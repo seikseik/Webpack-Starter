@@ -486,6 +486,9 @@ align-items: center;
 	}
   select {
   color: white;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // appearance: none;
   }
 
   option{
@@ -679,6 +682,7 @@ align-items: center;
       padding:10px 15px;
       margin:0px 5px;
       margin-top:15px;
+      cursor: pointer;
       &.is-checked{
         background: transparent;
         color:white;
