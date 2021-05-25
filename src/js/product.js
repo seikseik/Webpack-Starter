@@ -17,7 +17,7 @@ let svg = d3.select("#line_product")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("./data/product_semester.csv", function(data) {
+d3.csv("./data/product_semester_2.csv", function(data) {
   data.forEach(function(d) {
       d.date = parseTime(d.date);
   });

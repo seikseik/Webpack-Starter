@@ -33,7 +33,7 @@ var svg_product = d3.select("#graph")
         .attr("class", "svg");
 
 // Import the CSV data
-d3.csv("./data/product_2.csv", function(error, data) {
+d3.csv("./data/product_semester.csv", function(error, data) {
   if (error) throw error;
    // Format the data
   data.forEach(function(d) {

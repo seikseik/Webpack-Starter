@@ -484,19 +484,23 @@ align-items: center;
     // 	top: 8px;
 		// }
 	}
+  select {
+  color: white;
+  }
+
+  option{
+    background: #412642;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
   select{
     padding:10px 0px;
 		position: relative;
-    background: transparent;
-    color:white;
     border:none;
     border-bottom:1px solid;
     font-size: 15px;
     font-family: "basier_circlemedium" sans-serif;
-		background: transparent;
-		// -webkit-appearance: none;
-		//  -moz-appearance: none;
-		//  appearance: none;
+		background: #412642;
      text-transform: uppercase;
 		 padding-bottom: 10px;
 		 padding-right:45px;
@@ -999,9 +1003,9 @@ div, section{
       }
     }
     .line-chart{
-      select{
-        background: transparent;
-      }
+      // select{
+      //   background: transparent;
+      // }
       .chart-container{
         max-width: 100%;
         padding:0px;
