@@ -459,8 +459,8 @@ align-items: center;
     background: #412642;
     // border-radius: 20px;
     padding:50px;
-    width:100%;
-    max-width: 900px;
+    width:auto;
+    box-sizing: content-box;
     svg{
       width:100%;
       text{
